@@ -10,7 +10,7 @@ const Navbar = () => {
        
           <a className="flex title-font font-medium items-center text-yellow-500 mb-4 md:mb-0">
             <Image
-              src={require("../app/public/Assests/portfolio-image.jpeg")}
+              src={("../app/public/Assests/portfolio-image.jpeg")}
               alt="my logo"
               width={100}
               height={100}

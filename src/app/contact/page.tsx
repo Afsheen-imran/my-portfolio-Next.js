@@ -1,7 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
-import emailjs from "emailjs-com";
+import React, { useState } from 'react';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -10,26 +9,22 @@ const Contact = () => {
     message: '',
   });
 
-  const handleChange = (e:any) => {
+  const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
 
-  const sendEmail = (e:any) => {
-    e.preventDefault(); // Prevent the default form submission
-
-    emailjs.send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", formData, "YOUR_USER_ID")
-      .then((response) => {
-        console.log('SUCCESS!', response.status, response.text);
-        // Optionally reset the form or show a success message
-      })
-      .catch((err) => {
-        console.error('FAILED...', err);
-      });
+  const sendEmail = (e) => {
+    e.preventDefault();
+    // Implement email sending logic here
   };
 
   return (
-    <div id="Contact" style={{ minHeight: '100vh', backgroundImage: "url('https://i.pinimg.com/originals/c6/df/a2/c6dfa22150790c670c988c5196f6ba0e.gif')", backgroundSize: 'cover', backgroundPosition: 'center' }}>
+    <div 
+      id="Contact" 
+      className="min-h-screen bg-cover bg-center" 
+      style={{ backgroundImage: "url('https://i.pinimg.com/originals/c6/df/a2/c6dfa22150790c670c988c5196f6ba0e.gif')" }}
+    >
       <section className="text-gray-600 body-font relative max-h-fit">
         <div className="container px-5 py-24 mx-auto flex sm:flex-nowrap flex-wrap">
           <div className="lg:w-2/3 md:w-1/2 bg-gray-300 rounded-lg overflow-hidden sm:mr-10 p-10 flex items-end justify-start relative">
@@ -100,7 +95,7 @@ const Contact = () => {
                   className="w-full bg-white rounded border border-blue-500 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 h-32 text-base outline-none text-rose-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
                 />
               </div>
-              <button className="text-white bg-blue-500 border-0 py-2 px-3 focus:outline-none hover:bg-red-500 rounded text-lg ml-20">
+              <button type="submit" className="text-white bg-blue-500 border-0 py-2 px-3 focus:outline-none hover:bg-red-500 rounded text-lg ml-20">
                 Send Message
               </button>
             </form>

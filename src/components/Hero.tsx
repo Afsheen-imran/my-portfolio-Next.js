@@ -44,23 +44,13 @@ const Hero = () => {
               alt="My Image"
               width={1200}
               height={1200}
-              src={require("../../src/app/public/Assests/my-image3.jpeg")}
+              src={("../../src/app/public/Assests/my-image3.jpeg")}
             />
           </div>
         </div>
       </section>
 
-      {/* <style jsx>{`
-        @keyframes bgAnimation {
-          0% { background-position: 0% 0%; }
-          50% { background-position: 100% 0%; }
-          100% { background-position: 0% 0%; }
-        }
-
-        .animate-bg {
-          animation: bgAnimation 15s linear infinite;
-        }
-      `}</style> */}
+    
     </div>
   );
 };

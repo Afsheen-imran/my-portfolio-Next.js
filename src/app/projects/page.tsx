@@ -22,7 +22,7 @@ const Project = () => {
               <Image
                 alt="gallery"
                 className="absolute inset-0 object-cover object-center w-full h-full"
-                src={require("../../app/public/Assests/proj_1.jpg calculator.jpg")}
+                src={("../../app/public/Assests/proj_1.jpg calculator.jpg")}
               />
               <div className="relative z-10 w-full px-8 py-10 bg-white border-4 border-blue-500 opacity-0 hover:opacity-100">
                 <h2 className="mb-1 text-sm font-bold tracking-widest text-blue-500 title-font">
@@ -63,7 +63,7 @@ const Project = () => {
               <Image
                 alt="gallery"
                 className="absolute inset-0 object-cover object-center w-full h-full"
-                src={require("../../app/public/Assests/proj_3.jpg")}
+                src={("../../app/public/Assests/proj_3.jpg")}
               />
               <div className="relative z-10 w-full px-8 py-10 bg-white border-4 border-gray-200 opacity-0 hover:opacity-100">
                 <h2 className="mb-1 text-sm font-medium tracking-widest text-blue-500 title-font">CLI ATM Machine</h2>
@@ -82,7 +82,7 @@ const Project = () => {
               <Image
                 alt="gallery"
                 className="absolute inset-0 object-cover object-center w-full h-full"
-                src={require("../../app/public/Assests/proj_4.jpg")}
+                src={("../../app/public/Assests/proj_4.jpg")}
               />
               <div className="relative z-10 w-full px-8 py-10 bg-white border-4 border-gray-200 opacity-0 hover:opacity-100">
                 <h2 className="mb-1 text-sm font-medium tracking-widest text-blue-500 title-font">CLI To Do List</h2>
@@ -101,7 +101,7 @@ const Project = () => {
               <Image
                 alt="gallery"
                 className="absolute inset-0 object-cover object-center w-full h-full"
-                src={require("../../app/public/Assests/hackthon.png")}
+                src={("../../app/public/Assests/hackthon.png")}
               />
               <div className="relative z-10 w-full px-8 py-10 bg-white border-4 border-gray-200 opacity-0 hover:opacity-100">
                 <h2 className="mb-1 text-sm font-medium tracking-widest text-blue-500 title-font">Dynamic Resume Builder</h2>
