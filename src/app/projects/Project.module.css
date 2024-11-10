@@ -1,82 +1,60 @@
-/* General Container */
 .container {
-  width: 100%;
-  background-color: #121212;
-  padding: 4rem 0;
-  background-image: url('https://i0.wp.com/picjumbo.com/wp-content/uploads/dark-black-orange-3d-abstract-wallpaper-free-photo.jpg?w=1500&quality=50');
-  background-size: cover;
-  background-position: center;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .innerContainer {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1.5rem;
-  color: #fff;
   text-align: center;
 }
 
-/* Heading */
 .heading {
-  font-size: 2.5rem;
-  font-weight: bold;
-  margin-bottom: 2rem;
-  color: #ff6f61;
+  font-size: 2rem;
+  margin-bottom: 30px;
 }
 
-/* Project Card Layout */
 .wrap {
-  display: grid;
-  gap: 2rem;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  justify-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
 }
 
-/* Project Card Styling */
 .item {
-  background-color: #1c1c1c;
+  width: 300px;
+  border: 1px solid #ddd;
   border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.5);
-  transition: transform 0.3s ease;
-  position: relative;
-  width: 100%;
-  max-width: 350px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
 }
 
 .image {
-  border-bottom: 3px solid #ff6f61;
+  width: 100%;
+  height: 200px;
   object-fit: cover;
 }
 
 .info {
-  padding: 1.5rem;
-  text-align: left;
+  padding: 20px;
 }
 
 .title {
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: #ff6f61;
-  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
+  margin-bottom: 10px;
 }
 
 .description {
-  font-size: 0.9rem;
-  color: #ccc;
-  margin-bottom: 1rem;
-  line-height: 1.4;
+  font-size: 1rem;
+  margin-bottom: 15px;
 }
 
-/* Link Styling */
 .link {
+  color: #0070f3;
+  text-decoration: none;
   font-weight: bold;
-  color: #ff6f61;
-  text-decoration: underline;
-  cursor: pointer;
-  transition: color 0.2s;
 }
 
 .link:hover {
-  color: #ffa494;
+  text-decoration: underline;
 }

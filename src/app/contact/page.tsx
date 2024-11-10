@@ -33,7 +33,7 @@ const Contact = () => {
       </section>
       
       <section className={styles.footer}>
-        <p>If you prefer, you can also reach me through my email at: <a href="mailto:afsheen6441@gmail.com">example@example.com</a></p>
+        <p>If you prefer, you can also reach me through my email at: <a href="mailto:afsheen6441@gmail.com">afsheen6441@gmail.com</a></p>
       </section>
     </div>
   );

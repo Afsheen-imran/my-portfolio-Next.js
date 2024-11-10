@@ -6,7 +6,6 @@ import Image from "next/image";
 import Link from "next/link"; 
 import styles from "../projects/Project.module.css";
 
-
 const Project: React.FC = () => {
   const projects = [
     {
@@ -45,15 +44,12 @@ const Project: React.FC = () => {
       description: 'Explore dynamic pizza flavors with a website using Next.js, Tailwind CSS, and TypeScript.',
       link: 'https://assignment-2-components.vercel.app/',
     },
- 
     {
       src: '/images/countdown-timer.gif',
       title: 'Countdown timer',
-      description: 'A sleek and interactive countdown timer made with Next.js and TypeScript',
+      description: 'A sleek and interactive countdown timer made with Next.js and TypeScript.',
       link: '',
     },
- 
- 
   ];
 
   return (
@@ -68,12 +64,19 @@ const Project: React.FC = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              <Image alt={project.title} className={styles.image} src={project.src} width={500} height={300} /> {/* Set width and height for Image */}
+              <Image
+                alt={project.title}
+                className={styles.image}
+                src={project.src}
+                width={500} // Set the width for the image
+                height={300} // Set the height for the image
+                objectFit="cover" // Ensures the image covers the space
+              />
               <div className={styles.info}>
                 <h2 className={styles.title}>{project.title}</h2>
                 <p className={styles.description}>{project.description}</p>
                 <Link href={project.link} target="_blank" rel="noopener noreferrer">
-                  <a className={styles.link}>View Project...</a> {/* Wrap the text with an anchor tag inside the Link */}
+                  <a className={styles.link}>View Project...</a>
                 </Link>
               </div>
             </motion.div>
