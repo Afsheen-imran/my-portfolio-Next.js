@@ -1,43 +1,65 @@
-// components/About.js
+
+"use client"
+
 import Image from "next/image";
 import React from "react";
+import { motion } from "framer-motion";
+import styles from "../about/About.module.css";
 
-const About = () => {
+const About: React.FC = () => {
   return (
-    <div 
-      id="about" 
-      className="bg-cover bg-center h-screen"
-      style={{ backgroundImage: "url('https://i.pinimg.com/originals/cf/bc/37/cfbc370e45aee5035e26b4f2d3f24335.gif') " }}
-    >
-      <section className="text-rose-600 body-font h-full">
-        <div className="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center h-full">
-          <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0">
+    <div id="about" className={styles.container}>
+      <section className={styles.section}>
+        <div className={styles.contentContainer}>
+          {/* Image Animation */}
+          <motion.div
+            className={styles.imageWrapper}
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1 }}
+          >
             <Image
-              className="object-cover object-center rounded mx-auto w-[300px] h-[400px]"
-              alt="hero"
-              src={("../../../src/app/public/Assests/my-image.jpeg")}
+              className={styles.image}
+              alt="Afsheen Imran"
+              src="/images/my-image2.jpeg"
               width={300}
               height={400}
             />
-          </div>
-          <div className="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
-            <h1 className="title-font sm:text-4xl mt-4 text-3xl mb-2 font-medium text-rose-500">
-              About Me
-            </h1>
-            <p className="mb-2 leading-relaxed text-red-500 text-justify">
-              I’m a frontend web developer, social media marketer, Shopify store specialist, content writer, and graphic designer with over 2 years of experience. I specialize in creating responsive websites using HTML, CSS, JavaScript, TypeScript, React, and Next.js, and I help businesses grow through effective social media campaigns and optimized Shopify stores. My skills in content writing and design allow me to deliver creative, engaging solutions that connect with audiences and elevate brands. Let’s work together to bring your vision to life!
+          </motion.div>
+          
+          {/* Text Animation */}
+          <motion.div
+            className={styles.textWrapper}
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.3 }}
+          >
+            <h1 className={styles.title}>About Me</h1>
+            <p className={styles.paragraph}>
+              I am a frontend web developer, social media marketer, Shopify store specialist, content writer, and graphic designer with over 2 years of experience. I specialize in creating responsive websites using HTML, CSS, JavaScript, TypeScript, React, and Next.js, and I help businesses grow through effective social media campaigns and optimized Shopify stores. My skills in content writing and design allow me to deliver creative, engaging solutions that connect with audiences and elevate brands.
             </p>
-            <p className="mb-5 leading-relaxed text-red-500 text-justify">
-              With a comprehensive skill set and a commitment to delivering high-quality work, I am here to help businesses and individuals transform their ideas into reality. Let’s connect and bring your vision to life!
+            <p className={styles.paragraph}>
+              With a comprehensive skill set and a commitment to delivering high-quality work, I am here to help businesses and individuals transform their ideas into reality. Let us connect and bring your vision to life!
             </p>
-            <div className="flex justify-center">
+            
+            {/* Button Animation */}
+            <motion.div
+              className={styles.buttonWrapper}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 1, delay: 0.6 }}
+            >
               <a href="https://www.linkedin.com/in/afsheen-imran-b623a42a2/" target="_blank" rel="noopener noreferrer">
-                <button className="inline-flex text-white bg-blue-500 border-0 py-2 px-5 focus:outline flex-none hover:bg-red-500 rounded text-sm">
+                <motion.button
+                  className={styles.button}
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
                   LinkedIn
-                </button>
+                </motion.button>
               </a>
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
         </div>
       </section>
     </div>

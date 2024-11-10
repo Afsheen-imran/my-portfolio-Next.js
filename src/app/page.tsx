@@ -1,15 +1,23 @@
-import Navbar from "@/components/Navbar";
-import Hero from "@/components/Hero"
-import Footer from "@/components/Footer";
-import { FaYoutube } from "react-icons/fa";
-const Home = () => {
-  return (
-    <div>
-      
-      <Hero/>
-      <FaYoutube />
-    </div>
-  )
-}
 
-export default Home
+import React from "react";
+import styles from "../styles/Home.module.css";
+import Header from "../components/Header/Header";
+import Hero from "../components/Hero/Hero";
+import Footer from "../components/Footer/Footer";
+
+
+
+const Home = () => (
+  <div className={styles.homeContainer}>
+    <Header />
+    <main className={styles.mainContent}>
+      <section className={styles.section}>
+        <Hero />
+      </section>
+    
+    </main>
+    <Footer />
+  </div>
+);
+
+export default Home;
